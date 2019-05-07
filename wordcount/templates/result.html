@@ -1,0 +1,59 @@
+<html land="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="css/style.css">
+     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+</head>
+<style>
+body{
+     background-color:#ab93c9;
+     font-family: 'Jua', sans-serif;
+}
+#first{
+     color : black;
+     font-family: 'Jua', sans-serif;
+     Text-align:center;
+}
+#button {
+	background-image: -webkit-linear-gradient(top, #fdcb6e, #fdcb6e);
+	background-image: -moz-linear-gradient(top,#fdcb6e, #fdcb6e);
+	background-image: -ms-linear-gradient(top, #fdcb6e, #fdcb6e);
+	background-image: -o-linear-gradient(top, #fdcb6e, #fdcb6e);
+	background-image: linear-gradient(to bottom, #fdcb6e, #fdcb6e);
+	-moz-border-radius: 8;
+	border-radius: 8px;
+	font-family: 'Indie Flower', cursive;
+	color: black;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	width: 15%;
+	margin:auto;
+}
+#second{
+     background-color:#ffdee6;
+     padding: 100px;
+}
+</style>
+<body>
+     <br>
+     <br>
+     <br>
+     <h1 id="first">당신이 입력한 텍스트는 {{total}}로 구성되어 있습니다</h1>
+     <div id="second">
+          <a href="{%url 'home' %}" id="button" > Go back!</a>
+          <br>
+          <h2>입력한 텍스트 :</h2>
+          {{full}}
+          <h2>단어 카운트 :</h2>
+          {% for word, howmany in dictionary%}
+
+          {{word}}: {{howmany}}
+          <br>
+          {% endfor %}
+     </div>
+
+</body>

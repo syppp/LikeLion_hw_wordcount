@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html land="en">
+
+<head>
+     {%load static%}
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+     <link rel="stylesheet"type="text/css"href="{% static 'style.css' %}"></link>
+     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+     
+</head>
+<style> 
+#word{
+     color : #6c5ce7;
+     font-family: 'Indie Flower', cursive;
+     background-color : #fff3b1;
+     font-size:70px;
+}
+#about{
+     font-family: 'Indie Flower', cursive;
+     color : black;
+     font-size : 30px;
+}
+.box {
+    padding:100px;
+    margin: 20px 400px;
+    width:900px; 
+    height: 650px;
+    background-image: url("https://image.freepik.com/free-vector/tropical-foliage-illustration_53876-75800.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+#button {
+	background-image: -webkit-linear-gradient(top, #fdcb6e, #fdcb6e);
+	background-image: -moz-linear-gradient(top,#fdcb6e, #fdcb6e);
+	background-image: -ms-linear-gradient(top, #fdcb6e, #fdcb6e);
+	background-image: -o-linear-gradient(top, #fdcb6e, #fdcb6e);
+	background-image: linear-gradient(to bottom, #fdcb6e, #fdcb6e);
+	-moz-border-radius: 8;
+	border-radius: 8px;
+	font-family: 'Indie Flower', cursive;
+	color: black;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	width: 15%;
+	margin:auto;
+}
+body{
+     background-color:#ffdee6;
+}
+</style>
+<body>
+     <div id="word">
+          <h1 style="text-align: center" > Count words!</h1>
+     </div>     
+  
+     <div class="box">
+          <a href="{%url 'about'%}" id= "about" >ABOUT(click!)</a>
+          <form action="{%url 'result'%}">
+               <textarea cols="90" rows="20" name="fulltext"></textarea>
+               <br>
+               <input type="submit" value="Count!"id="button">
+          </form>
+     </div>     
+</body>
+</html>
+
